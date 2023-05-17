@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    background-color:antiquewhite;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('../assets/font/Roboto-Regular.ttf');
+}
+
+/* thiết lập font cho các thẻ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
+    font-family: roboto;
+}
+
+/* thiết lập hover, focus cho input */
+input:focus,
+select:focus {
+    outline: none;
+    border: 1px solid #0062CC;
+}
+
+input:hover,
+select:hover {
+    border: 1px solid #0062CC;
+}
+
+* {
+    font-size: 14px;
+    font-family: roboto;
+}
+
+button:hover,
+img:hover,
+input[type="checkbox"]:hover,
+tr:hover {
+    cursor: pointer;
+}
+
+select {
+    overflow-y: scroll;
+}
+
+select option {
+    color: #000000;
+    /* Màu chữ */
+    border-radius: 4px;
+    box-shadow: 0 0 16px rgb(23 27 42 / 16%);
+    height: 50px;
+    border: none;
+}
+
+select option:hover {
+    background-color: #CCE4FF;
+}
+
+/* search */
+.icon__search {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 7px;
+    left: 218px;
+}
+
+.input__search {
+    padding-left: 8px;
+    padding-right: 32px;
+    height: 33px;
+    width: 200px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
+    color: #000000;
+}
+
+.main__search {
+    display: flex;
+}
+
+#button-filter {
+    height: 36px;
+    background-color: #FFFF;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
+    min-width: 80px;
+    position: relative;
+    margin-left: 10px;
+    padding-left: 33px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+#button-filter:hover {
+    background-color: #F5F5F5;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+}
+
+#button-add {
+    background-color: #007AFF;
+    color: #ffffff;
+    font-size: 14px;
+    margin-left: 24px;
+}
+
+#button-add:hover {
+    background-color: #0062CC;
+}
+
+img {
+    height: 24px;
+    width: 24px;
+}
+
+.nav-table-bottom {
+    display: flex;
+    justify-content: right;
+    background-color: #ffffff;
+    border-top: 1px solid #E0E0E0;
+    align-items: center;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 0 16px rgb(23 27 42 / 16%);
+}
+
+.nav-table {
+    position: relative;
+}
+
+.nav-table-bottom>* {
+    margin-right: 24px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.nav-table-bottom>img {
+    color: #bbbbbbbb;
+}
+
+/* lớp phủ khi mở popup */
+.overlay {
+    position: fixed;
+    /* đảm bảo phủ hết trang web */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* đặt màu đen với độ mờ 50% */
+    z-index: 2;
+    /* đặt độ ưu tiên để hiển thị lớp phủ trên các phần tử khác */
+    display: none;
+}
+
+/* css thông báo validate form */
+.div-notify {
+    width: 350px;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.div-notify__exit {
+    position: absolute;
+    background-color: #ffffff;
+    right: -16px;
+    top: 0px;
+    width: 24px;
+    height: 24px;
+}
+
+#notify-validate {
+    width: 416px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 24px;
+    box-sizing: border-box;
+    z-index: 10;
+    box-shadow: 0 0 16px rgb(23 27 42 / 24%);
+    position: absolute;
+    top: calc(50vh - 80px);
+    left: calc(50vw - 200px);
+    display: none;
+    /* chỉ cho thao tác trên khối này */
+    pointer-events: auto;
+}
+
+#notify-validate li {
+    margin-top: 8px;
+}
+
+#div-notify__ok {
+    min-width: 80px;
+    background-color: #50B83C;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
+    float: right;
+    color: #ffffff;
+}
+
+#div-notify__ok:hover {
+    background-color: #1e8909;
+}
+
+.err-null {
+    color: #ef5350;
+    margin-top: 8px;
+}
+
+.err-input {
+    border: 1px solid #ef5350;
+}
+
+/* route */
+.rout {
+    color: #000000;
+    text-decoration: none;
+}
+
+.rout:hover {
+    color: #ff6d00;
+}
+
+.active-router>div {
+    background-color: #fbe9e7;
+    color: #ff6d00;
+}
+
+input[type=checkbox] {
+    /* thay đổi kích thước checkbox */
+    transform: scale(0.8);
+}
